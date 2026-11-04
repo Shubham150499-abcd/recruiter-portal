@@ -1,0 +1,93 @@
+/* Styles for recruiter & jobs pages (TalentDesk) */
+.jd-stat-card { display: flex; flex-direction: column; gap: 4px; }
+.jd-stat-card .stat-label { color: var(--muted); font-size: 13px; font-weight: 500; }
+.jd-stat-card a.stat { color: var(--text); }
+.jd-stat-card.accent .stat { color: var(--primary); }
+.jd-hero { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  background: linear-gradient(120deg, var(--primary) 0%, #4a7bff 100%); color: #fff; border: 0; }
+.jd-hero h1 { margin: 0 0 4px; }
+.jd-hero .muted { color: rgba(255,255,255,0.85); }
+.jd-hero .btn { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.35); color: #fff; }
+.jd-hero .btn:hover { background: rgba(255,255,255,0.25); }
+.jd-hero .btn-primary { background: #fff; color: var(--primary); border-color: #fff; }
+.jd-hero .btn-primary:hover { background: var(--primary-soft); }
+.jd-section-title { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; }
+.jd-section-title h2 { margin: 0; }
+
+.jd-list { list-style: none; margin: 0; padding: 0; }
+.jd-list > li { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.jd-list > li:last-child { border-bottom: 0; }
+
+.jd-skill-bar { display: grid; grid-template-columns: minmax(80px, 140px) 1fr 40px; gap: 8px; align-items: center; margin-bottom: 8px; font-size: 13px; }
+.jd-skill-bar .bar { height: 8px; background: var(--surface-2); border-radius: 999px; overflow: hidden; border: 1px solid var(--border); }
+.jd-skill-bar .bar > span { display: block; height: 100%; background: var(--primary); border-radius: 999px; }
+
+.jd-meta { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--muted); font-size: 13px; margin: 4px 0; }
+.jd-meta span { white-space: nowrap; }
+
+.jd-job-row { display: flex; gap: 16px; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
+.jd-job-row .jd-job-main { flex: 1 1 320px; min-width: 0; }
+.jd-job-row .jd-job-title { font-size: 16px; font-weight: 600; color: var(--text); }
+.jd-job-row .jd-job-side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.jd-counts { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }
+.jd-counts a, .jd-counts span { font-weight: 600; }
+.jd-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.jd-search { display: flex; gap: 8px; margin-bottom: 12px; }
+.jd-search input { flex: 1; }
+.jd-tabs { overflow-x: auto; }
+.jd-tabs button { white-space: nowrap; }
+.jd-tabs .count { display: inline-block; margin-left: 6px; font-size: 11px; background: var(--surface-2); border-radius: 999px; padding: 0 6px; }
+
+/* Tag input */
+.tag-input { position: relative; }
+.tag-input-box { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); min-height: 40px; cursor: text; }
+.tag-input-box.focused { border-color: var(--primary); outline: 2px solid var(--primary-soft); }
+.tag-input-box.invalid { border-color: var(--danger); }
+.tag-input-box input { border: 0; outline: 0; padding: 4px 2px; flex: 1; min-width: 120px; width: auto; }
+.tag-input-box input:focus { outline: 0; }
+.tag-input-box .chip { background: var(--primary-soft); border-color: transparent; color: var(--primary); }
+.tag-suggest { position: absolute; left: 0; right: 0; top: calc(100% + 4px); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); z-index: 20; max-height: 220px; overflow-y: auto; list-style: none; margin: 0; padding: 4px; }
+.tag-suggest li { padding: 6px 10px; border-radius: 6px; cursor: pointer; }
+.tag-suggest li.hl, .tag-suggest li:hover { background: var(--primary-soft); color: var(--primary); }
+
+/* Forms */
+.jd-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
+.jd-form-grid .full { grid-column: 1 / -1; }
+.field .req { color: var(--danger); margin-left: 2px; }
+.field input.invalid, .field select.invalid, .field textarea.invalid { border-color: var(--danger); }
+.jd-form-actions { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; position: sticky; bottom: 0; background: var(--surface); padding: 12px 0 0; }
+.jd-form-section + .jd-form-section { margin-top: 12px; }
+
+/* Profile */
+.jd-avatar { width: 72px; height: 72px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-size: 26px; font-weight: 700; flex-shrink: 0; overflow: hidden; }
+.jd-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.jd-profile-head { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.jd-meter { height: 10px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; overflow: hidden; margin: 8px 0; }
+.jd-meter > span { display: block; height: 100%; border-radius: 999px; transition: width .3s; }
+.jd-dl { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 8px 16px; margin: 0; }
+.jd-dl dt { color: var(--muted); font-size: 13px; }
+.jd-dl dd { margin: 0; word-break: break-word; }
+.jd-missing { list-style: none; padding: 0; margin: 8px 0 0; font-size: 13px; }
+.jd-missing li { padding: 2px 0; color: var(--muted); }
+.jd-missing li::before { content: '+ '; color: var(--primary); font-weight: 700; }
+
+/* Job detail */
+.jd-desc { white-space: pre-wrap; }
+.jd-match-row { display: flex; gap: 12px; align-items: center; }
+.jd-match-row .info { flex: 1; min-width: 0; }
+.jd-cta { display: flex; justify-content: center; width: 100%; padding: 12px; font-size: 15px; }
+.jd-skel { background: linear-gradient(90deg, var(--surface-2), var(--border), var(--surface-2)); background-size: 200% 100%; animation: jdsk 1.2s infinite; border-radius: 6px; height: 14px; margin: 8px 0; }
+@keyframes jdsk { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+@media (max-width: 640px) {
+  .jd-form-grid { grid-template-columns: 1fr; }
+  .jd-dl { grid-template-columns: 1fr; gap: 2px; }
+  .jd-dl dd { margin-bottom: 8px; }
+  .jd-job-row .jd-job-side { align-items: flex-start; width: 100%; }
+  .jd-form-actions .btn { flex: 1; justify-content: center; }
+  .jd-skill-bar { grid-template-columns: 90px 1fr 32px; }
+}
+@media (max-width: 900px) {
+  [data-resp="dash"], [data-resp="detail"] { grid-template-columns: 1fr !important; }
+}
